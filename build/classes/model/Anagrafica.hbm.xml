@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="Anagrafica"
+		table="ANAGRAFICA"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="ID"
+		>
+			<generator class="increment"/>
+		</id>
+
+		<property
+			name="Cognome"
+			column="COGNOME"
+			type="string"
+			not-null="true"
+			length="20"
+		/>
+		<property
+			name="Nome"
+			column="NOME"
+			type="string"
+			not-null="true"
+			length="20"
+		/>
+		<property
+			name="Telefono"
+			column="TELEFONO"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Cellulare"
+			column="CELLULARE"
+			type="string"
+			not-null="false"
+			length="20"
+		/>
+		<property
+			name="Indirizzo"
+			column="INDIRIZZO"
+			type="string"
+			not-null="false"
+			length="100"
+		/>
+		<property
+			name="Email"
+			column="EMAIL"
+			type="string"
+			not-null="false"
+			length="50"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

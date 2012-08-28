@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="model">
+	<class
+		name="Bilancio"
+		table="BILANCIO"
+	>
+		<meta attribute="sync-DAO">false</meta>
+		<id
+			name="Id"
+			type="integer"
+			column="ID"
+		>
+			<generator class="increment"/>
+		</id>
+
+		<property
+			name="Credito"
+			column="CREDITO"
+			type="integer"
+			not-null="false"
+			length="22"
+		/>
+		<property
+			name="Debito"
+			column="DEBITO"
+			type="integer"
+			not-null="false"
+			length="22"
+		/>
+		<property
+			name="Data"
+			column="DATA"
+			type="date"
+			not-null="false"
+			length="7"
+		/>
+		<property
+			name="Note"
+			column="NOTE"
+			type="string"
+			not-null="false"
+			length="500"
+		/>
+
+
+	</class>	
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration
+    PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<!-- local connection properties -->
+		<property name="hibernate.connection.url">
+			jdbc:oracle:thin:@localhost:1521:MACDEV
+		</property>
+		<property name="hibernate.connection.driver_class">
+			oracle.jdbc.driver.OracleDriver
+		</property>
+		<property name="hibernate.connection.username">sviluppo</property>
+		<property name="hibernate.connection.password">sviluppo</property>
+		<!-- property name="hibernate.connection.pool_size"></property -->
+		<!-- dialect for Oracle (any version) -->
+		<property name="dialect">
+			org.hibernate.dialect.Oracle10gDialect
+		</property>
+		<property name="hibernate.show_sql">false</property>
+		<property name="hibernate.transaction.factory_class">
+			org.hibernate.transaction.JDBCTransactionFactory
+		</property>
+
+		<mapping resource="model/Anagrafica.hbm.xml" />
+		<mapping resource="model/Bilancio.hbm.xml" />
+
+	</session-factory>
+</hibernate-configuration>
